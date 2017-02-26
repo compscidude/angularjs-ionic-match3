@@ -11,5 +11,5 @@ ScreenShots
 ![Screenshot](http://imgur.com/ywkJ32P.png?raw=true) <br /> 
 ####Casual Mode
 ![Screenshot](http://imgur.com/SaD2hpu.png?raw=true) <br />
-####TimeAttack Mode
+####Casual Mode(The player got 2 out of 5 combinations correct)
 ![Screenshot](http://imgur.com/G7snc1c.png?raw=true) <br />
