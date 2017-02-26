@@ -1,0 +1,10 @@
+<div class="item item-text-wrap">
+	<div class="row">
+		<span ng-repeat="myShape in board">
+			<button class="button-shape {{myShape.background_colour}}" ng-class="{selected: myShape.selected}">
+	         <!-- we need special case for our triangle, since css handles coloring differently -->
+	         <div id="{{myShape.shape}}" ng-class="myShape.shape == 'triangle' ? 'triangle-' + myShape.shape_colour : myShape.shape_colour" ></div>
+		</button>
+		</span>
+	</div>
+</div>

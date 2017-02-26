@@ -1,0 +1,190 @@
+/* Empty. Add your own CSS if you like */
+
+
+input { margin: 0; }
+
+.col{
+	text-align:center;
+}
+
+.content{
+	background: white;
+}
+
+.text-center{
+	text-align:center;
+	margin: 0 auto;
+}
+
+.underline{
+	border-bottom:1px solid #cecece;
+}
+
+.outside{
+	position: absolute;
+	top:1px;
+	left: 4px;
+	color: #CC5500;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.index{
+	float:left;
+	margin-right:5px;
+}
+
+.right{
+	float:right;
+}
+
+.right-5{
+	margin-right: 5px;
+}
+
+.button-shape{
+	position: relative;
+	padding:15px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	border: 3px solid #E3E3E3;
+}
+
+.button-shape:active{
+	border: 3px solid #2ECC40;
+}
+
+.button{
+	margin-top:10px;
+}
+
+.black{
+  background-color: #111111;
+}
+
+.white{
+  background-color: #FFFFFF;
+}
+
+.grey{
+  background-color: #CFCFC4;
+}
+
+.clear{
+  clear: both;
+}
+
+.red-font{
+	color:red;
+}
+
+.font-red{
+	color:red;
+}
+
+.green-font{
+	color:green;
+}
+
+.orange-font{
+	color:orange;
+}
+
+.timer{
+	font-weight: bold;
+}
+
+
+.red {
+  background: #FF4136;
+}
+
+.blue{
+  background: #004687;
+}
+
+.yellow{
+  background: #FFDC00;
+}
+
+.triangle-red{
+  color: #FF4136;
+}
+
+.triangle-blue{
+  color: #004687;
+}
+
+.triangle-yellow{
+  color: #FFDC00;
+}
+
+.selected{
+  border:3px solid #2ECC40;
+}
+
+.icon{
+	font-size:15px;
+	margin:0 auto;
+	padding: 0;
+}
+
+.check{
+	color: green;
+}
+
+.kev-title{
+	text-align:center;
+	font-size: 15px;
+	color: grey;
+}
+
+.kev-menu{
+	color:red;
+}
+
+.board{
+    display: -webkit-inline-flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+
+
+.home{
+	background-color: #E3E0FA;
+	vertical-align: center;
+}
+
+#circle {
+	width: 60px;
+	height: 60px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+
+#square {
+	width: 60px;
+	height: 60px;
+}
+
+#triangle{
+	width: 0;
+	height: 0;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	border-bottom: 60px solid;
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+

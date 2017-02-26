@@ -1,0 +1,144 @@
+
+
+<div class="bar bar-header bar-balanced">
+  <h1 class="title"> Tutorial </h1>
+</div>
+
+<ion-content class="has-header">
+<div class="card">
+  <div class="item item-text-wrap">
+  	<h2> There are three properties </h2> 
+  	<br>
+        <p> 1) Shape (Circle, Triangle, Square)</p>
+    	<p> 2) Colour of the shape (Red, Blue, Yellow)</p>
+    	<p> 3) Colour of the background (White, Black, Grey)</p>
+    	<br>
+      
+    	<span>
+	  		<board board='shapes'></board>
+	    </span>
+     	<i class="ion-wand icon" > Click to examine each of the three properties </i>	
+     	 
+  </div>
+</div>
+	
+<div class="card">
+  <div class="item item-text-wrap">
+  	<h2> The magic rule of 3 </h2> <br> <p> Pick 3 squares from a 3x3 grid, where each of the 3 properties are all either all different or all the same.  </p>
+  	<br> <p> Example of a possible valid combination:
+  	 				<br>
+  	 					 1) "same" shape <br>
+  	 					 2) "same" backgrond colour <br>
+  	 					 3) "different" colour of the shape <br> 
+  	 				
+  	 	</p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-text-wrap">
+  	<br>
+  			<span>
+				<h2> Practice #1</h2> <br>
+				<p> Is the following a valid combination ? </p>
+					<span>
+			  			<board board='example2'></board>
+			    	</span>
+
+
+
+				    <ion-radio ng-model="choice" ng-value="'yes'" ng-change='resizeScroll()'> Yes </ion-radio>
+					<ion-radio ng-model="choice" ng-value="'no'" ng-change='resizeScroll()'> No </ion-radio>
+					<div ng-show="choice == 'yes'">
+						<br>
+					  <span> 
+						<p> Ooops, this is actually an <b>invalid</b> combination.  </p>
+						<p> 1) The shapes are neither all <u>different</u> nor all the <u> same </u> &nbsp; <i class="ion-close-round red-font"></i>  </p>
+						<p> 2) The colour of the shapes are all the <u>different</u>  <i class="ion-checkmark-round icon green-font" > </i> </p>
+						<p class='red-font'> 3) However, the colour of the background are <u>same</u>  &nbsp; <i class="ion-checkmark-round icon green-font" > </i> </p>
+					  </span>
+					</div>
+					<div ng-show="choice == 'no'">
+						<br>
+					   <span> 
+						 <p> Great ! You got it. </p>
+					   </span> 
+					</div>
+			</span>
+	</div> 
+
+
+	<div class="item item-text-wrap">
+  	<br>
+		  	<span>
+		  	<h2> Practice #2 </h2> </br>
+		  	<p> Let's try one more, is the following a valid combination ?
+		  	 </p>
+
+		  	   <span>
+			  		<board board='example1'></board>
+			    </span>
+
+		     		<ion-radio ng-model="choice2" ng-value="'yes'" ng-change='resizeScroll()'> Yes </ion-radio>
+					<ion-radio ng-model="choice2" ng-value="'no'" ng-change='resizeScroll()'> No </ion-radio>
+					<div ng-show="choice2 == 'no'">
+						<br>
+					  <span> 
+						<p> Ooops, this is actually a <b>valid</b> combination. </p> 
+						<p> 1) The shapes are all <u>different</u> <i class="ion-checkmark-round icon green-font" > </i> </p>
+						<p> 2) The colour of the shapes are all the <u>same</u> <i class="ion-checkmark-round icon green-font" > </i> </p>
+						<p> 3) Lastly, the colour of the background are all the <u>same</u>  <i class="ion-checkmark-round icon green-font" > </i></p>
+					  </span>
+
+					</div>
+					<div ng-show="choice2 == 'yes'">
+						<br>
+					   <span> 
+						 <p> Great ! You got it. </p>
+					   </span> 
+					</div> 
+			</span>
+		</div>
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="item item-text-wrap"> 
+	  	<h2> Examples of <b>Valid</b> Combinations </h2>
+	  				
+		<button class="button button-balanced" ng-click="randomizeValid()">
+		  <i class="ion-refresh icon"> Randomize </i> 
+		</button>
+	  	
+	  	<br>
+	  	
+	  	<span>
+	  		<board board='example6'></board>
+	    </span>
+	    <span>
+	  		<board board='example7'></board>
+	    </span>
+  </div>
+
+    <div class="item item-text-wrap">
+	  	<h2> Examples of <b>Invalid</b> Combinations </h2>
+	  		   <button class="button button-balanced" ng-click="randomizeInvalid()">
+	  			  <i class="ion-refresh icon"> Randomize </i> 
+			   </button>
+	  	<br>
+	    <span>
+	  		<board board='example4'></board>
+	    </span>
+	    <span>
+	  		<board board='example5'></board>
+	    </span>
+  </div>
+</div>
+
+<button class="button button-full button-light" ui-sref="game({mode: 'Casual'})">
+    Start Game
+</button>
+
+
+</ion-content>

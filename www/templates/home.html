@@ -1,0 +1,30 @@
+
+<ion-content class="home">
+<div class>
+  <div clas="row">
+  </div>
+  <div class="row">
+      <button class="col button button-dark" ui-sref="game({mode: 'Casual'})"> 
+		  <i class="ion-play icon">  </i> &nbsp;  Casual Play  </button> 
+  </div>
+
+  <div class="row">
+  			<button class="col button button-assertive" ui-sref="game({mode: 'Time Attack'})"> 
+    	 <i class="ion-ios-timer-outline icon" > </i> &nbsp;  Time Attack </button> 
+  </div>
+
+   <div class="row">
+      <button class="col button button-balanced" ui-sref="tutorial"> 
+      	<i class="ion-university icon" > </i> Tutorial </button>
+  </div>
+
+   <div class="row">
+   	<div class="col">
+   		<div class="card list">	
+	     	  <a href="#" class="item"> Your Highest Score: {{maxScore}} </a>
+  		</div>
+
+  	</div>
+  </div>
+</div>
+</ion-content>

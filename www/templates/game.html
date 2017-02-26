@@ -1,0 +1,79 @@
+
+
+
+	<!-- Header -->
+	<div class="row underline">
+	    <!-- Only display this if user is in Time Attack Mode -->
+	    <div class="col"> 
+		  	<span>
+		  		<span  ng-if="gameMode == 'Time Attack'">
+			  		 <i class="ion-ios-timer-outline icon" > </i>
+			  		 <span  ng-class="{'green-font' : timer <= 60 && timer > 45, 'orange-font' : timer > 20 && timer < 45, 'red-font' : timer < 20, timer: true}"> {{timer}} 
+			  		 </span>
+
+		  		</span>
+		  		&nbsp;&nbsp;
+		  		<span>
+		  			<i class="ion-checkmark-round icon" > <span class="check"> {{ score }} </span> </i>	
+		  		</span>
+		  	</span>	
+		 </div>
+		 <div class="col">
+	  	 	<span class="kev-title"> {{gameMode.toUpperCase()}} </span>
+	  	</div>
+	  	<div class="col" ng-click="reset()">
+	  		<i class="ion-refresh icon"></i>
+	  		Reset
+	  	</div>
+	</div>
+
+<!-- draw the board -->
+<ion-content class="has-header center content board">
+ 	<div class="row" ng-repeat="row in board2">
+ 		<div class="col" ng-repeat="cell in row" ng-init="index = $parent.$index + (($index) + (2*$parent.$index))">
+ 				<!-- <h3 class="index"> {{ index + 1 }} </h3> -->
+ 			<button value="{{index}}" ng-click="clicked(index)" class="button-shape {{cell.background_colour}}" ng-class="{selected: cell.selected}">
+ 				 <div class="outside"> 
+             		{{index+1}}
+             	</div>
+             <!-- we need special case for our triangle, since css handles coloring differently -->
+             <div id="{{cell.shape}}" ng-class="cell.shape == 'triangle' ? 'triangle-' + cell.shape_colour : cell.shape_colour" ></div>
+			</button>
+ 		</div>
+ 	</div>
+
+ 	<!-- To show empty solution boxes; set to ? until user has a correct match -->
+   <div ng-repeat="match in solution">
+   	  <div ng-if="$index%5 == 0" class="row">
+   	  	 <div class="col">
+   	  	 	 <button class="button button-dark" ng-click="hint()" ng-if="$index <= solution.length">
+  				<span ng-show="!matches[$index]"> ? </span>
+   	  	 	 	{{matches[$index].toString()}}</button>
+   	  	 	 <button class="button button-dark" ng-click="hint()" ng-if="$index + 1 < solution.length">
+   	  	 	 	<span ng-show="!matches[$index+1]"> ? </span>
+   	  	 	 	{{matches[$index+1].toString()}}</button>
+   	  	 	 <button class="button button-dark" ng-click="hint()" ng-if="$index + 2 < solution.length">
+   	  	 	 	<span ng-show="!matches[$index+2]"> ? </span>
+   	  	 	 	{{matches[$index+2].toString()}}</button>
+   	  	 	 <button class="button button-dark" ng-click="hint()" ng-if="$index + 3 < solution.length">
+   	  	 	 	<span ng-show="!matches[$index+3]"> ? </span>
+   	  	 	 	{{matches[$index+3].toString()}}</button>
+   	  	 	 	<button class="button button-dark" ng-click="hint()" ng-if="$index + 4 < solution.length">
+   	  	 	 	<span ng-show="!matches[$index+4]"> ? </span>
+   	  	 	 	{{matches[$index+4].toString()}}</button>
+   	  	 </div>
+   	  </div>
+   	</div>
+   </div>
+
+  <!--
+  <div ng-repeat="match in solution" ng-class-even="even" ng-class-odd="odd">
+ 	 	    <li class="item">
+      			{{match}}
+    		</li>
+   </div> 
+  -->
+
+
+</ion-content>
+
