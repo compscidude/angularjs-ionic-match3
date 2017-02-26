@@ -1,7 +1,9 @@
 match3 Angular/Ionic App
 ==================
 
-This is a chat application built using socket.io and node.js with backbone to handle events and rendering of views.
-Backbone was used to organize the front-end javascript code. 
+
 
 ![Screenshot](http://imgur.com/BcwHwUR.png?raw=true)
+![Screenshot](http://imgur.com/SaD2hpu.png?raw=true)
+![Screenshot](http://imgur.com/ywkJ32P.png?raw=true)
+![Screenshot](http://imgur.com/G7snc1c.png?raw=true)
