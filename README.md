@@ -5,11 +5,15 @@ celebrities and guests with high IQ compete in a series of games to throne the t
 
 ScreenShots 
 ==================
-####Menu Screen
+Menu Screen
+==================
 ![Screenshot](http://imgur.com/sHFTch2.png?raw=true) <br />
-####Tutorial Mode
+Tutorial Mode
+==================
 ![Screenshot](http://imgur.com/ywkJ32P.png?raw=true) <br /> 
-####Casual Mode
+Casual Mode
+==================
 ![Screenshot](http://imgur.com/SaD2hpu.png?raw=true) <br />
-####Casual Mode (The player got 2 out of 5 combinations correct)
+Casual Mode (The player got 2 out of 5 combinations correct)
+==================
 ![Screenshot](http://imgur.com/G7snc1c.png?raw=true) <br />
